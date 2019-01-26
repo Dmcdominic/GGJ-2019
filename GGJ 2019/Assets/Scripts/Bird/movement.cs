@@ -66,13 +66,8 @@ public class movement : MonoBehaviour {
 		float y_input = Input.GetAxisRaw(vertical_axis);
 
 		// Horizontal movement
+		transform.Translate(Mathf.Abs(x_input) * (-1f) * x_mult * Time.deltaTime, 0, 0);
 		//rb.velocity += new Vector2(x_input * x_mult * Time.deltaTime, 0);
-		transform.Translate(Mathf.Abs(x_input)*(-1f) * x_mult * Time.deltaTime, 0, 0);
-		//if (x_input != 0) {
-		//	rb.interpolation = RigidbodyInterpolation2D.None;
-		//} else {
-		//	rb.interpolation = RigidbodyInterpolation2D.Interpolate;
-		//}
 
 		// Check if you've landed, to reset jump charges
 		RaycastHit2D raycast = Physics2D.Raycast(feet_pos.transform.position, Vector2.down, raycast_dist, landing_layer_mask);
@@ -122,6 +117,7 @@ public class movement : MonoBehaviour {
 		// Glide if you're falling, and holding up
 		check_glide(y_input);
 		gliding_var.val = gliding;
+		// todo - glide animation
 
 		// Clamp the velocity
 		float falling_clamp = gliding ? glide_max_velo : max_velo;
@@ -163,6 +159,7 @@ public class movement : MonoBehaviour {
 		rb.velocity = new Vector2(rb.velocity.x, jump_velo);
 		SoundManager.instance.playFlap();
 		jump_charges--;
+		// todo - flap animation
 	}
 }
 

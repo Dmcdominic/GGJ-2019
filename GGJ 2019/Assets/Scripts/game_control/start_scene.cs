@@ -6,8 +6,17 @@ using UnityEngine.SceneManagement;
 public class start_scene : MonoBehaviour {
 
 	public int scene_index;
+	public bool on_any_button_press = false;
 
 	void Start() {
-		SceneManager.LoadScene(scene_index);
+		if (!on_any_button_press) {
+			SceneManager.LoadScene(scene_index);
+		}
+	}
+
+	private void Update() {
+		if (on_any_button_press && Input.anyKeyDown) {
+			SceneManager.LoadScene(scene_index);
+		}
 	}
 }
