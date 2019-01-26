@@ -11,6 +11,8 @@ public class playermovement : MonoBehaviour
     float horizontalmove = 0f;
     bool jp = false;
 
+   
+
     // Start is called before the first frame update
   
 
@@ -18,7 +20,6 @@ public class playermovement : MonoBehaviour
     void Update()
     {
         horizontalmove = Input.GetAxisRaw("Horizontal") * runspeed;
-
 
         if (Input.GetKeyDown("space"))
         {
@@ -29,7 +30,7 @@ public class playermovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        controller.Move(horizontalmove * Time.fixedDeltaTime, false, jp);
+        controller.Move(horizontalmove * Time.fixedDeltaTime, jp);
         jp = false;
     }
 }
