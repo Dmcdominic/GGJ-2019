@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - bird
+  - platform
+  - twig
+  - nest
   layers:
   - Default
   - TransparentFX
@@ -14,10 +18,10 @@ TagManager:
   - 
   - 
   - obstacle
-  - 
-  - 
-  - 
-  - 
+  - platform
+  - bird
+  - twig
+  - nest
   - 
   - 
   - 
@@ -43,4 +47,19 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: platforms
+    uniqueID: 2784141419
+    locked: 0
+  - name: nest
+    uniqueID: 2526852391
+    locked: 0
+  - name: bird
+    uniqueID: 1915640253
+    locked: 0
+  - name: foreground_obj
+    uniqueID: 3802192965
+    locked: 0
+  - name: UI
+    uniqueID: 2609367167
     locked: 0
