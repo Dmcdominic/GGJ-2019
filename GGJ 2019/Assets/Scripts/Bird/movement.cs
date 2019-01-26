@@ -25,6 +25,8 @@ public class movement : MonoBehaviour {
 	public GameObject visuals;
 	public GameObject feet_pos;
 
+	public bool_var gliding_var;
+
 	// Static settings
 	public static move_stage move_Stage = move_stage.glide; // Start this at flutter, if we have time
 	public static bool gliding = false;
@@ -54,6 +56,8 @@ public class movement : MonoBehaviour {
 		base_grav_scale = rb.gravityScale;
 		landing_layer_mask = LayerMask.GetMask(new string[] { "platform" });
 		move_Stage = init_stage;
+		gliding = false;
+		gliding_var.val = false;
 	}
 
 	// Called once per frame
@@ -96,13 +100,12 @@ public class movement : MonoBehaviour {
 			// Fall through to double_jump, which has same behavior
 			case move_stage.double_jump:
 				if (y_input > 0 && !jump_held && jump_charges > 0) {
-					rb.velocity = new Vector2(rb.velocity.x, jump_velo);
-					jump_charges--;
+					jump();
 				}
 				break;
 			case move_stage.fly:
 				if (y_input > 0 && !jump_held) {
-					rb.velocity = new Vector2(rb.velocity.x, jump_velo);
+					jump();
 				}
 				break;
 		}
@@ -118,6 +121,7 @@ public class movement : MonoBehaviour {
 
 		// Glide if you're falling, and holding up
 		check_glide(y_input);
+		gliding_var.val = gliding;
 
 		// Clamp the velocity
 		float falling_clamp = gliding ? glide_max_velo : max_velo;
@@ -140,6 +144,7 @@ public class movement : MonoBehaviour {
 	private void check_glide(float y_input) {
 		if (move_Stage == move_stage.flutter) {
 			gliding = false;
+			gliding_var.val = false;
 			return;
 		}
 
@@ -151,6 +156,13 @@ public class movement : MonoBehaviour {
 			gliding = false;
 			rb.gravityScale = base_grav_scale;
 		}
+	}
+
+	// Jump!
+	private void jump() {
+		rb.velocity = new Vector2(rb.velocity.x, jump_velo);
+		SoundManager.instance.playFlap();
+		jump_charges--;
 	}
 }
 

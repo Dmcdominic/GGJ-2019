@@ -51,12 +51,14 @@ public class nest : MonoBehaviour {
 
 	public static void eat_bug() {
 		bugs_needed--;
+		SoundManager.instance.playEat();
 	}
 
 	private void complete_stage() {
 		int new_stage = (int)movement.move_Stage + 1;
 		movement.move_Stage = (move_stage)new_stage;
 		print("Completed stage! New move stage: " + movement.move_Stage);
+		// todo - fade to black while bird rests and grows
 
 		twigs_needed += stage_twigs_needed[new_stage - 1];
 		bugs_needed += stage_bugs_needed[new_stage - 1];

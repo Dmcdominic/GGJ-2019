@@ -32,6 +32,7 @@ public class twig_carrier : MonoBehaviour {
 		carrying_twig = true;
 		Destroy(twig);
 		twig_in_beak.SetActive(true);
+		SoundManager.instance.playPickupTwig();
 	}
 
 	// Add a twig that you're carrying to the nest
