@@ -6,16 +6,20 @@ public class movement : MonoBehaviour {
 
 	// Public fields
 	public float x_mult;
+	public float max_velo;
 
 	public float flutter_force;
 	public float flutter_delay;
+	public float flutter_thresh;
 
 	public float glide_grav_scale;
+	public float glide_max_velo;
 
 	public float jump_velo;
 
 	// Static settings
-	public static move_stage move_Stage = move_stage.jump;
+	public static move_stage move_Stage = move_stage.flutter;
+	public static bool gliding = false;
 
 	// Private vars
 	private readonly string horizontal_axis = "Horizontal";
@@ -56,7 +60,8 @@ public class movement : MonoBehaviour {
 			case move_stage.flutter:
 				if (flutter_timer > 0) {
 					flutter_timer -= Time.deltaTime;
-				} else if (y_input > 0) {
+				} else if (y_input > 0 && rb.velocity.y < flutter_thresh) {
+					print("Fluttered");
 					rb.AddForce(new Vector2(0, flutter_force));
 					flutter_timer = flutter_delay;
 				}
@@ -65,7 +70,6 @@ public class movement : MonoBehaviour {
 				break;
 			case move_stage.jump:
 				if (y_input > 0 && !jump_held && jump_charges > 0) {
-					print("jumped");
 					rb.velocity = new Vector2(rb.velocity.x, jump_velo);
 					jump_held = true;
 					jump_charges--;
@@ -87,6 +91,10 @@ public class movement : MonoBehaviour {
 		// Glide if you're falling, and holding up
 		check_glide(y_input);
 
+		// Clamp the velocity
+		float falling_clamp = gliding ? glide_max_velo : max_velo;
+		rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -falling_clamp, jump_velo + 0.1f));
+
 		// Sprite flip
 		if (x_input > 0) {
 			sr.flipX = true;
@@ -98,12 +106,15 @@ public class movement : MonoBehaviour {
 	// Adjust the bird's gravity scale based on y-input, to glide (if you're falling)
 	private void check_glide(float y_input) {
 		if (move_Stage == move_stage.flutter) {
+			gliding = false;
 			return;
 		}
 		
 		if (rb.velocity.y < 0 && y_input > 0) {
+			gliding = true;
 			rb.gravityScale = glide_grav_scale;
 		} else {
+			gliding = false;
 			rb.gravityScale = base_grav_scale;
 		}
 	}
