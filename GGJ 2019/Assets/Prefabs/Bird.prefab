@@ -167,13 +167,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4922377951886952168}
-  m_LocalRotation: {x: 0, y: 0, z: 0.13009359, w: 0.99150175}
-  m_LocalPosition: {x: 0.272, y: 0.307, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.1300935, w: 0.99150175}
+  m_LocalPosition: {x: -0.272, y: 0.307, z: 0}
   m_LocalScale: {x: 0.3, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1306971503593277232}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 14.95}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -14.95}
 --- !u!212 &5760729192950722365
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -235,7 +235,6 @@ GameObject:
   - component: {fileID: 6817035697596892886}
   - component: {fileID: 5989220273206739221}
   - component: {fileID: 6446910773902877165}
-  - component: {fileID: 3717425726972592887}
   m_Layer: 10
   m_Name: Bird
   m_TagString: bird
@@ -294,7 +293,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.038043275, y: -0.012674928}
+  m_Offset: {x: 0, y: -0.012674928}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -345,32 +344,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   twig_in_beak: {fileID: 4922377951886952168}
---- !u!61 &3717425726972592887
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5989220273206739226}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &6434609000602509487
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,7 +414,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300142, guid: e243e7125fad65a459ac498df496480a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 4.45, y: 3.55}
@@ -598,17 +571,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 379621225781645618, guid: c99fcfa58a081a343bcd036686278893,
-        type: 3}
-      propertyPath: showing_var
-      value: 
-      objectReference: {fileID: 11400000, guid: 9e425edb6a308394d98c91e986074177,
-        type: 2}
-    - target: {fileID: 5012657409499023099, guid: c99fcfa58a081a343bcd036686278893,
-        type: 3}
-      propertyPath: m_Name
-      value: bug symbol
-      objectReference: {fileID: 0}
     - target: {fileID: 5012657409499023092, guid: c99fcfa58a081a343bcd036686278893,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -623,6 +585,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 379621225781645618, guid: c99fcfa58a081a343bcd036686278893,
+        type: 3}
+      propertyPath: showing_var
+      value: 
+      objectReference: {fileID: 11400000, guid: 9e425edb6a308394d98c91e986074177,
+        type: 2}
+    - target: {fileID: 5012657409499023099, guid: c99fcfa58a081a343bcd036686278893,
+        type: 3}
+      propertyPath: m_Name
+      value: bug symbol
       objectReference: {fileID: 0}
     - target: {fileID: 5012657409499023093, guid: c99fcfa58a081a343bcd036686278893,
         type: 3}
