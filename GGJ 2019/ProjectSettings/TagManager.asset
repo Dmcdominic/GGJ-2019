@@ -13,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - obstacle
   - 
   - 
   - 
@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: background
+    uniqueID: 3240617339
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
