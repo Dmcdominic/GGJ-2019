@@ -8,7 +8,7 @@ public class twig_carrier : MonoBehaviour {
 
 	private bool carrying_twig = false;
 	private Animator animator;
-	private GameObject twig;
+	private GameObject to_destroy;
 
 	// Init
 	void Start() {
@@ -21,6 +21,9 @@ public class twig_carrier : MonoBehaviour {
 		if (!carrying_twig && collision.gameObject.tag == "twig") {
 			pickup_twig(collision.gameObject);
 		}
+		if (collision.gameObject.tag == "big bug") {
+			eat_big_bug(collision.gameObject);
+		}
 	}
 
 	// Check if you can place a twig in the nest
@@ -32,7 +35,7 @@ public class twig_carrier : MonoBehaviour {
 
 	// Pick up a twig off the ground
 	private void pickup_twig(GameObject the_twig) {
-		twig = the_twig;
+		to_destroy = the_twig;
 		carrying_twig = true;
 		SoundManager.instance.playPickupTwig();
 		animator.SetTrigger("peck");
@@ -40,8 +43,8 @@ public class twig_carrier : MonoBehaviour {
 
 	// Destroy the twig from the ground
 	public void delete_twig() {
-		if (twig != null) {
-			Destroy(twig);
+		if (to_destroy != null) {
+			Destroy(to_destroy);
 		}
 	}
 
@@ -58,5 +61,14 @@ public class twig_carrier : MonoBehaviour {
 		twig_in_beak.SetActive(false);
 		nest.GetComponent<nest>().place_twig();
 		animator.SetTrigger("peck");
+	}
+
+	// Eat the big bug to unlock jumping
+	private void eat_big_bug(GameObject big_bug) {
+		to_destroy = big_bug;
+		twig_in_beak.SetActive(false);
+		SoundManager.instance.playEat();
+		animator.SetTrigger("peck");
+		movement.move_Stage = move_stage.jump;
 	}
 }
