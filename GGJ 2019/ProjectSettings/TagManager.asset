@@ -4,9 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - bug
+  - twig
   - bird
   - platform
-  - twig
   - nest
   layers:
   - Default
@@ -22,6 +23,7 @@ TagManager:
   - bird
   - twig
   - nest
+  - background
   - 
   - 
   - 
@@ -45,9 +47,16 @@ TagManager:
   - name: background
     uniqueID: 3240617339
     locked: 0
+  - name: obstacles
+    uniqueID: 2532216629
+    locked: 0
+  - name: player
+    uniqueID: 1541835999
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
   - name: platforms
     uniqueID: 2784141419
     locked: 0
@@ -62,4 +71,8 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 2609367167
+=======
+  - name: collectives
+    uniqueID: 1972373509
+>>>>>>> develop
     locked: 0
