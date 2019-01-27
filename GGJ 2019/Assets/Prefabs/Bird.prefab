@@ -330,10 +330,12 @@ MonoBehaviour:
   glide_max_velo: 1.2
   jump_velo: 4.5
   raycast_dist: 0.1
+  updraft_accel: 30
   cam_adjust_time: 6
   visuals: {fileID: 3859842469569060869}
   feet_pos: {fileID: 3046963407691484291}
   gliding_var: {fileID: 11400000, guid: b2df93185d804e44f94ef445d3ad3965, type: 2}
+  updrafting_var: {fileID: 11400000, guid: 7dcfd964e4b6b8f418460216e599db9b, type: 2}
 --- !u!114 &6446910773902877165
 MonoBehaviour:
   m_ObjectHideFlags: 0

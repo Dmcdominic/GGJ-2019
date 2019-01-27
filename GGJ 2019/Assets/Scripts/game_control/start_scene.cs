@@ -15,7 +15,7 @@ public class start_scene : MonoBehaviour {
 	}
 
 	private void Update() {
-		if (on_any_button_press && Input.anyKeyDown) {
+		if (on_any_button_press && Input.anyKeyDown && !(Input.GetAxisRaw("Cancel") > 0)) {
 			SceneManager.LoadScene(scene_index);
 		}
 	}

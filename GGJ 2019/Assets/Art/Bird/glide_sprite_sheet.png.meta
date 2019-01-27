@@ -1,0 +1,635 @@
+fileFormatVersion: 2
+guid: 5e9b37bfa2f375f47a840a810bd5470d
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: glide_sprite_sheet_0
+    21300002: glide_sprite_sheet_1
+    21300004: glide_sprite_sheet_2
+    21300006: glide_sprite_sheet_3
+    21300008: glide_sprite_sheet_4
+    21300010: glide_sprite_sheet_5
+    21300012: glide_sprite_sheet_6
+    21300014: glide_sprite_sheet_7
+    21300016: glide_sprite_sheet_8
+    21300018: glide_sprite_sheet_9
+    21300020: glide_sprite_sheet_10
+    21300022: glide_sprite_sheet_11
+    21300024: glide_sprite_sheet_12
+    21300026: glide_sprite_sheet_13
+    21300028: glide_sprite_sheet_14
+    21300030: glide_sprite_sheet_15
+    21300032: glide_sprite_sheet_16
+    21300034: glide_sprite_sheet_17
+    21300036: glide_sprite_sheet_18
+    21300038: glide_sprite_sheet_19
+    21300040: glide_sprite_sheet_20
+    21300042: glide_sprite_sheet_21
+    21300044: glide_sprite_sheet_22
+    21300046: glide_sprite_sheet_23
+    21300048: glide_sprite_sheet_24
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: glide_sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4500
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a1d5869f85a1547b8242dbdf5c3b37
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 4500
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a755ac8d9b0700b4baf02e0573940e74
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 2812
+        y: 4500
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c668a2f1fb70a754b823000a0619b63f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 4218
+        y: 4500
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead65f0fb4e04d14fa59cf478c195b56
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 5624
+        y: 4500
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a20ae66e648bc824db5f78cf376291d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3375
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e82fbb0ef7c4f34398efbf54be16b2f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 3375
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5555d826647c35143b55c6cffede2d32
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 2812
+        y: 3375
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023295aa859015f46909c5ceda44998e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 4218
+        y: 3375
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6a4d131ffea8d43933b7233d2f6ed7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 5624
+        y: 3375
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b84b4770037b5ae46ac49c117faac580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2250
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 183fadf49d61a1d43b9c64da0a6cee1f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 2250
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d324e03dcf44344a9b427d912021bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 2812
+        y: 2250
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0caf5dd8cbb8434482f9b8803b55ed4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 4218
+        y: 2250
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9f69c4490d4cc449cbad3bd58e4278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 5624
+        y: 2250
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6086516f397aee4e81191cd5433dafc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1125
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 913b29dbff7f96c4a8cee876ae1d2ec1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 1125
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50eab017688624d41bfe407fac97d878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2812
+        y: 1125
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53c9bc5930bf59044bd211b0783f766c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 4218
+        y: 1125
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a9e214e7eb923449b4cb798375fa1a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 5624
+        y: 1125
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 872fcaf0ac9647d4da5a4cb6711fd2be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb1d5b1474fad344780bfc9ac172c867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 0
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b34dc69374eaa594a8d027b9a8a506ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 2812
+        y: 0
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09e8bcd3919f7584b82ebe87e46130d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 4218
+        y: 0
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579ea12cc82b15243ace35bafb7afcc6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glide_sprite_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 5624
+        y: 0
+        width: 1406
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b4ba5aae46b194fb81c013af78a372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: afccbe6ee03998c4eaf620c55417e548
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

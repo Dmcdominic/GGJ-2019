@@ -1,0 +1,425 @@
+fileFormatVersion: 2
+guid: b46a3fd44183c654abe1c3cc55545628
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: hop_sprite_sheet_0
+    21300002: hop_sprite_sheet_1
+    21300004: hop_sprite_sheet_2
+    21300006: hop_sprite_sheet_3
+    21300008: hop_sprite_sheet_4
+    21300010: hop_sprite_sheet_5
+    21300012: hop_sprite_sheet_6
+    21300014: hop_sprite_sheet_7
+    21300016: hop_sprite_sheet_8
+    21300018: hop_sprite_sheet_9
+    21300020: hop_sprite_sheet_10
+    21300022: hop_sprite_sheet_11
+    21300024: hop_sprite_sheet_12
+    21300026: hop_sprite_sheet_13
+    21300028: hop_sprite_sheet_14
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hop_sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1998
+        width: 1406
+        height: 999
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70deb860509f22444a6353de1e31e949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hop_sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 1998
+        width: 1406
+        height: 999
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc3012d2197f1743b8d559186c09ed6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hop_sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 2812
+        y: 1998
+        width: 1406
+        height: 999
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd5c3943f90808d46a6c07b7b51bca8c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hop_sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 4218
+        y: 1998
+        width: 1406
+        height: 999
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e9096054018bb541bf9687af85031d7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hop_sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 5624
+        y: 1998
+        width: 1406
+        height: 999
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f07732eba7c6649b45fb78865e8792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hop_sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 7030
+        y: 1998
+        width: 1406
+        height: 999
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cddd5cb4c52efac44883c6c796e0e65d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hop_sprite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 999
+        width: 1406
+        height: 999
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ac568410f4d3d42987c434ca090033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hop_sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 999
+        width: 1406
+        height: 999
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c899008a3224ad246a397173d9c8c481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hop_sprite_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 2812
+        y: 999
+        width: 1406
+        height: 999
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b580d948cc57394d9f09fcaaf44b970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hop_sprite_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 4218
+        y: 999
+        width: 1406
+        height: 999
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 275abaefbdada77489c0b68f3de5e2b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hop_sprite_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 5624
+        y: 999
+        width: 1406
+        height: 999
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5748f8084323544e882f44944723c9c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hop_sprite_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 7030
+        y: 999
+        width: 1406
+        height: 999
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d133e97ccf35446439a1b6044d6ee7b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hop_sprite_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1406
+        height: 999
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e4dd2823263ae43bf4bdfafa181c04
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hop_sprite_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 0
+        width: 1406
+        height: 999
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a887899a9523604ca60c904fe4c06dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hop_sprite_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 7030
+        y: 0
+        width: 1406
+        height: 999
+      alignment: 9
+      pivot: {x: 0.7403484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b903dc8b5ccad85498f6368d6793f47e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a8775529a82fa0e4187b63b530ee8bbd
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
