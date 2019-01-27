@@ -4,22 +4,29 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour {
+	// AudioSources
 	public AudioSource flap;
 	public AudioSource chirp;
 	public AudioSource eat;
 	public AudioSource pickupTwig;
 	public AudioSource smallChirp;
 	public AudioSource hop;
+	public AudioSource veryHappy;
+
 	public AudioSource gliding;
 	public AudioSource updraft;
 	public AudioSource sleeping;
+
 	public AudioSource titleTrack;
 	public AudioSource lvlTrack;
 
+	// Other references and vars
 	public bool_var gliding_var;
 	public bool_var updraft_var;
 	public bool_var sleeping_var;
+
 	public static SoundManager instance = null;
+
 	public float lowPitchRange;
 	public float highPitchRange;
 	public float smallChirpRangeMult;
@@ -33,7 +40,7 @@ public class SoundManager : MonoBehaviour {
 			Destroy(gameObject);
 			return;
 		}
-		
+
 		DontDestroyOnLoad(gameObject);
 
 		StartCoroutine("repeat_chrip");
@@ -113,7 +120,7 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	public void playSmallChirp() {
-		smallChirp.pitch = Random.Range(1 - ((1- lowPitchRange)*smallChirpRangeMult), 1 + ((highPitchRange - 1)*smallChirpRangeMult));
+		smallChirp.pitch = Random.Range(1 - ((1 - lowPitchRange) * smallChirpRangeMult), 1 + ((highPitchRange - 1) * smallChirpRangeMult));
 		smallChirp.Play();
 	}
 
@@ -122,8 +129,17 @@ public class SoundManager : MonoBehaviour {
 		hop.Play();
 	}
 
-	public void playSleeping() {
-		sleeping.Play();
+	public void playVeryHappy(bool delayed = false) {
+		if (delayed) {
+			StartCoroutine(playVeryHappyDelayed());
+		} else {
+			veryHappy.Play();
+		}
+	}
+
+	IEnumerator playVeryHappyDelayed() {
+		yield return new WaitForSeconds(0.3f);
+		veryHappy.Play();
 	}
 
 	public void playSingle(AudioClip clip) {

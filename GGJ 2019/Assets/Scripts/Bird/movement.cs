@@ -85,6 +85,7 @@ public class movement : MonoBehaviour {
 
 		if (!movement_enabled) {
 			camera_track();
+			rb.velocity = Vector3.zero;
 			return;
 		}
 
@@ -103,7 +104,8 @@ public class movement : MonoBehaviour {
 			if (move_Stage == move_stage.jump) {
 				jump_charges = 1;
 			} else if (move_Stage == move_stage.double_jump) {
-				jump_charges = 2;
+				//jump_charges = 2;
+				jump_charges = 1; // todo - make lvl3 w/ double jump?
 			}
 		}
 
@@ -170,6 +172,20 @@ public class movement : MonoBehaviour {
 			animator.SetBool("hopping", false);
 		}
 
+		// Check if you should be flying
+		if (rb.velocity.y > 0.5f && !updrafting && !gliding) {
+			animator.SetBool("flying", true);
+		} else {
+			animator.SetBool("flying", false);
+		}
+
+		// Check if you should be falling
+		if (rb.velocity.y < 0 && !gliding) {
+			animator.SetBool("falling", true);
+		} else {
+			animator.SetBool("falling", false);
+		}
+
 		// Transform flip
 		if (x_input > 0) {
 			transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.x, 180f, transform.rotation.z));
@@ -209,6 +225,7 @@ public class movement : MonoBehaviour {
 		if (move_Stage == move_stage.flutter) {
 			gliding = false;
 			gliding_var.val = false;
+			rb.gravityScale = base_grav_scale;
 			return;
 		}
 
