@@ -168,7 +168,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4922377951886952168}
   m_LocalRotation: {x: 0, y: 0, z: -0.1300935, w: 0.99150175}
-  m_LocalPosition: {x: -0.272, y: 0.307, z: 0}
+  m_LocalPosition: {x: -0.265, y: 0.198, z: 0}
   m_LocalScale: {x: 0.3, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1306971503593277232}
@@ -351,6 +351,7 @@ MonoBehaviour:
   updraft_accel: 30
   cam_adjust_time: 6
   visuals: {fileID: 3859842469569060869}
+  thoughts: {fileID: 61558226}
   feet_pos: {fileID: 3046963407691484291}
   gliding_var: {fileID: 11400000, guid: b2df93185d804e44f94ef445d3ad3965, type: 2}
   updrafting_var: {fileID: 11400000, guid: 7dcfd964e4b6b8f418460216e599db9b, type: 2}

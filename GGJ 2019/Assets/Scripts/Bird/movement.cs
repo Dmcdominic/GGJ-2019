@@ -26,6 +26,7 @@ public class movement : MonoBehaviour {
 	public float cam_adjust_time;
 
 	public GameObject visuals;
+	public GameObject thoughts;
 	public GameObject feet_pos;
 
 	public bool_var gliding_var;
@@ -189,8 +190,10 @@ public class movement : MonoBehaviour {
 		// Transform flip
 		if (x_input > 0) {
 			transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.x, 180f, transform.rotation.z));
+			thoughts.transform.rotation = Quaternion.Euler(new Vector3(thoughts.transform.rotation.x, 180f, thoughts.transform.rotation.z));
 		} else if (x_input < 0) {
 			transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.x, 0, transform.rotation.z));
+			thoughts.transform.rotation = Quaternion.Euler(new Vector3(thoughts.transform.rotation.x, 180f, thoughts.transform.rotation.z));
 		}
 
 		// Camera tracking
