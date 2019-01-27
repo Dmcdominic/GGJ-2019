@@ -103,7 +103,8 @@ public class movement : MonoBehaviour {
 			if (move_Stage == move_stage.jump) {
 				jump_charges = 1;
 			} else if (move_Stage == move_stage.double_jump) {
-				jump_charges = 2;
+				//jump_charges = 2;
+				jump_charges = 1; // todo - make lvl3 w/ double jump?
 			}
 		}
 
