@@ -6,14 +6,14 @@ public class twig_carrier : MonoBehaviour {
 
 	public GameObject twig_in_beak;
 
-	private bool carrying_twig = false;
+	private static bool carrying_twig = false;
 	private Animator animator;
 	private GameObject to_destroy;
 
 	// Init
 	void Start() {
 		animator = GetComponent<Animator>();
-		twig_in_beak.SetActive(false);
+		twig_in_beak.SetActive(carrying_twig);
 	}
 
 	// Check if you can pick up a twig

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class movement : MonoBehaviour {
 
 	// Public fields
-	public move_stage init_stage; // Todo - remove
+	public move_stage init_stage;
 
 	public float x_mult;
 	public float max_velo;
@@ -74,9 +74,23 @@ public class movement : MonoBehaviour {
 
 		base_grav_scale = rb.gravityScale;
 		landing_layer_mask = LayerMask.GetMask(new string[] { "platform" });
+		// todo - this is editor only:
+#if UNITY_EDITOR
 		move_Stage = init_stage;
+#endif
+#if UNITY_STANDALONE
+#endif
 		gliding = false;
 		gliding_var.val = false;
+	}
+
+	public static void full_init() {
+		move_Stage = move_stage.glide;
+		gliding = false;
+		movement_enabled = true;
+		current_scene = 1;
+
+		nest.nest_full_init();
 	}
 
 	// Called once per frame
