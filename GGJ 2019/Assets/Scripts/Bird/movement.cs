@@ -107,6 +107,8 @@ public class movement : MonoBehaviour {
 			} else if (move_Stage == move_stage.double_jump) {
 				//jump_charges = 2;
 				jump_charges = 1; // todo - make lvl3 w/ double jump?
+			} else if (move_Stage == move_stage.fly) {
+				jump_charges = 2; // Flying stage is actually double jump...
 			}
 		}
 
@@ -130,6 +132,12 @@ public class movement : MonoBehaviour {
 				}
 				break;
 			case move_stage.fly:
+				// Fly behaves like double jump, because we messed with movement stages
+				if (y_input_raw > 0 && !jump_held && jump_charges > 0) {
+					jump();
+				}
+				break;
+			case move_stage.momma:
 				if (y_input_raw > 0 && !jump_held) {
 					jump();
 				}
@@ -252,4 +260,4 @@ public class movement : MonoBehaviour {
 }
 
 // Movement stages enum
-public enum move_stage { flutter, glide, jump, double_jump, fly }
+public enum move_stage { flutter, glide, jump, double_jump, fly, momma }

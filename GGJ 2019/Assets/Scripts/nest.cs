@@ -45,7 +45,7 @@ public class nest : MonoBehaviour {
 			twig_thought.val = twigs_needed > 0;
 			bug_thought.val = bugs_needed > 0;
 			if (twigs_needed <= 0 && bugs_needed <= 0) {
-				if (movement.move_Stage < move_stage.fly) {
+				if (movement.move_Stage < move_stage.momma) {
 					complete_stage();
 				}
 			}
