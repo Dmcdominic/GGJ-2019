@@ -11,6 +11,7 @@ TagManager:
   - nest
   - big bug
   - updraft
+  - bouncy leaf
   layers:
   - Default
   - TransparentFX

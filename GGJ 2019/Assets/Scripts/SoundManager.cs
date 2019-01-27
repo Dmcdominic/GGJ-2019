@@ -9,6 +9,7 @@ public class SoundManager : MonoBehaviour {
 	public AudioSource eat;
 	public AudioSource pickupTwig;
 	public AudioSource smallChirp;
+	public AudioSource hop;
 	public AudioSource gliding;
 	public AudioSource updraft;
 	public AudioSource titleTrack;
@@ -98,6 +99,11 @@ public class SoundManager : MonoBehaviour {
 	public void playSmallChirp() {
 		smallChirp.pitch = Random.Range(1 - ((1- lowPitchRange)*smallChirpRangeMult), 1 + ((highPitchRange - 1)*smallChirpRangeMult));
 		smallChirp.Play();
+	}
+
+	public void playHopSound() {
+		hop.pitch = Random.Range(lowPitchRange * 2, highPitchRange * 2);
+		hop.Play();
 	}
 
 	public void playSingle(AudioClip clip) {

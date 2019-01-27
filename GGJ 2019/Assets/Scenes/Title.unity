@@ -219,6 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene_index: 2
   on_any_button_press: 1
+  black_fade_transition: 1
 --- !u!4 &801906456
 Transform:
   m_ObjectHideFlags: 0

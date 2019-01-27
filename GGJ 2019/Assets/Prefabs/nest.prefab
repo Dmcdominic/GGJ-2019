@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f41636bf835ac443b0065666bb3dc39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stage_twigs_needed: 000000000400000004000000
-  stage_bugs_needed: 020000000400000004000000
+  stage_twigs_needed: 0300000003000000
+  stage_bugs_needed: 0300000003000000
   twig_thought: {fileID: 11400000, guid: a9b1f88b72e8aca41a4d52c4138ba4ad, type: 2}
   bug_thought: {fileID: 11400000, guid: 9e425edb6a308394d98c91e986074177, type: 2}

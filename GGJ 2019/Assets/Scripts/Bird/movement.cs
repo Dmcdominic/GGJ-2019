@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class movement : MonoBehaviour {
 
@@ -33,6 +34,8 @@ public class movement : MonoBehaviour {
 	// Static settings
 	public static move_stage move_Stage = move_stage.glide; // Start this at flutter, if we have time
 	public static bool gliding = false;
+	public static int current_scene = 1;
+	public static movement bird_instance;
 
 	// Private vars
 	private readonly string horizontal_axis = "Horizontal";
@@ -56,6 +59,13 @@ public class movement : MonoBehaviour {
 
 	// Init
 	void Awake() {
+		if (bird_instance == null) {
+			bird_instance = this;
+		} else if (bird_instance != this) {
+			Destroy(gameObject);
+			return;
+		}
+
 		rb = GetComponent<Rigidbody2D>();
 		col = GetComponent<Collider2D>();
 		animator = GetComponent<Animator>();
@@ -69,6 +79,10 @@ public class movement : MonoBehaviour {
 
 	// Called once per frame
 	void FixedUpdate() {
+		// Reset the current_scene
+		current_scene = SceneManager.GetActiveScene().buildIndex;
+
+		// Get input
 		float x_input = Input.GetAxis(horizontal_axis);
 		float x_input_raw = Input.GetAxisRaw(horizontal_axis);
 		float y_input_raw = Input.GetAxisRaw(vertical_axis);
@@ -139,7 +153,9 @@ public class movement : MonoBehaviour {
 
 		// Clamp the velocity
 		float falling_clamp = gliding ? glide_max_velo : max_velo;
-		rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -falling_clamp, jump_velo + 0.1f));
+		float max_y_velo = updrafting ? jump_velo * 1.8f : float.MaxValue;
+		float new_x_velo = (gliding && rb.velocity.y < 0.5f && x_input == 0) ? rb.velocity.x / 2f : rb.velocity.x;
+		rb.velocity = new Vector2(new_x_velo, Mathf.Clamp(rb.velocity.y, -falling_clamp, max_y_velo));
 
 		// Check if you should be hopping
 		if (Mathf.Abs(x_input_raw) > 0 && Mathf.Abs(rb.velocity.y) < 0.05f) {
@@ -161,22 +177,28 @@ public class movement : MonoBehaviour {
 		Camera.main.transform.Translate(displacement * Time.deltaTime * cam_adjust_time);
 	}
 
+	private void OnTriggerEnter2D(Collider2D collider) {
+		if (collider.gameObject.tag == "bouncy leaf" && rb.velocity.y < 0) {
+			rb.velocity = new Vector2(rb.velocity.x, Mathf.Pow(Mathf.Abs(rb.velocity.y), 2.5f) / 10f);
+		}
+	}
+
 	// Adjust the bird's gravity scale based on y-input, to glide (if you're falling)
 	private void check_glide(float y_input) {
-		if (move_Stage == move_stage.flutter) {
-			gliding = false;
-			gliding_var.val = false;
-			return;
-		}
-
 		if (updrafting) {
 			rb.gravityScale = glide_grav_scale;
 			gliding = true;
 			return;
 		}
 
+		if (move_Stage == move_stage.flutter) {
+			gliding = false;
+			gliding_var.val = false;
+			return;
+		}
+
 		//if (rb.velocity.y < 0 && y_input > 0) {
-		if (y_input > 0) {
+		if (y_input > 0 && rb.velocity.y <= jump_velo) {
 			rb.gravityScale = glide_grav_scale;
 			gliding = rb.velocity.y < 0;
 		} else {

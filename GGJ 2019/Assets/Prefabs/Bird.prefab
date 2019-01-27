@@ -232,11 +232,13 @@ GameObject:
   m_Component:
   - component: {fileID: 5989220273206739222}
   - component: {fileID: 5989220273206739224}
+  - component: {fileID: 9047799140239345442}
   - component: {fileID: 6817035697596892886}
   - component: {fileID: 5989220273206739221}
   - component: {fileID: 6446910773902877165}
   - component: {fileID: 302699727}
   - component: {fileID: 1326972519}
+  - component: {fileID: 2536503211447759883}
   m_Layer: 10
   m_Name: Bird
   m_TagString: bird
@@ -276,12 +278,28 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 1.8
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!70 &9047799140239345442
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5989220273206739226}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0048938245, y: -0.017118573}
+  m_Size: {x: 0.33361033, y: 0.68207955}
+  m_Direction: 0
 --- !u!61 &6817035697596892886
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -289,7 +307,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5989220273206739226}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -322,7 +340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   init_stage: 1
   x_mult: 3
-  max_velo: 5
+  max_velo: 7
   flutter_force: 120
   flutter_delay: 0.7
   flutter_thresh: -0.5
@@ -378,6 +396,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b5538bda3d2645479fd63b5f7b9ce88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2536503211447759883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5989220273206739226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e797b82254d1aa441b891f2945aa3fe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6434609000602509487
