@@ -21,6 +21,9 @@ public class twig_carrier : MonoBehaviour {
 		if (!carrying_twig && collision.gameObject.tag == "twig") {
 			pickup_twig(collision.gameObject);
 		}
+		if (collision.gameObject.tag == "bug") {
+			eat_smol_bug(collision.gameObject);
+		}
 		if (collision.gameObject.tag == "big bug") {
 			eat_big_bug(collision.gameObject);
 		}
@@ -62,7 +65,17 @@ public class twig_carrier : MonoBehaviour {
 		carrying_twig = false;
 		twig_in_beak.SetActive(false);
 		nest.GetComponent<nest>().place_twig();
+		SoundManager.instance.playPlaceTwig();
 		animator.SetTrigger("peck");
+	}
+
+	// Eat small bug
+	private void eat_smol_bug(GameObject smol_bug) {
+		to_destroy = smol_bug;
+		StartCoroutine(ensure_destroyed(smol_bug));
+		StartCoroutine(ensure_twig_revealed());
+		animator.SetTrigger("peck");
+		nest.eat_bug();
 	}
 
 	// Eat the big bug to unlock jumping

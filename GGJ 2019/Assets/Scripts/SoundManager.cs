@@ -9,6 +9,7 @@ public class SoundManager : MonoBehaviour {
 	public AudioSource chirp;
 	public AudioSource eat;
 	public AudioSource pickupTwig;
+	public AudioSource placeTwig;
 	public AudioSource smallChirp;
 	public AudioSource hop;
 	public AudioSource veryHappy;
@@ -91,7 +92,7 @@ public class SoundManager : MonoBehaviour {
 		}
 
 		if (sleeping_var.val && sleeping.volume < 1f) {
-			sleeping.volume += Time.deltaTime * 4;
+			sleeping.volume += Time.deltaTime * 0.3f;
 		} else if (!sleeping_var.val && sleeping.volume > 0f) {
 			sleeping.volume -= Time.deltaTime * 6;
 		}
@@ -117,6 +118,11 @@ public class SoundManager : MonoBehaviour {
 	public void playPickupTwig() {
 		pickupTwig.pitch = Random.Range(lowPitchRange, highPitchRange);
 		pickupTwig.Play();
+	}
+
+	public void playPlaceTwig() {
+		placeTwig.pitch = Random.Range(lowPitchRange, highPitchRange);
+		placeTwig.Play();
 	}
 
 	public void playSmallChirp() {

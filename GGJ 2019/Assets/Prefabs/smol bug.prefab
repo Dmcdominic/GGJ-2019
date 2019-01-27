@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3043981656778900683
+--- !u!1 &1768092314216387478
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7332912997812125217}
-  - component: {fileID: 8836423767809110490}
-  - component: {fileID: 2360238430624686064}
-  - component: {fileID: 3043981656778900684}
+  - component: {fileID: 3706226244129607284}
+  - component: {fileID: 2772761134185664309}
+  - component: {fileID: 6361715392980799458}
+  - component: {fileID: 4636197287141553926}
   m_Layer: 0
-  m_Name: nest
-  m_TagString: nest
+  m_Name: smol bug
+  m_TagString: big bug
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7332912997812125217
+--- !u!4 &3706226244129607284
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3043981656778900683}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.9, y: 2.039, z: 0.13865429}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 1768092314216387478}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 12.48, y: 0.72, z: 0.13865429}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8836423767809110490
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!212 &2772761134185664309
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3043981656778900683}
+  m_GameObject: {fileID: 1768092314216387478}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -67,10 +67,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1768114905
-  m_SortingLayer: 4
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5c280546d777246f6ae0bb63f0b4c640, type: 3}
+  m_SortingLayerID: -492774331
+  m_SortingLayer: 5
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: d7bbd791d920f406bae61e19af26442e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -81,40 +81,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &2360238430624686064
-CapsuleCollider2D:
+--- !u!50 &6361715392980799458
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3043981656778900683}
+  m_GameObject: {fileID: 1768092314216387478}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &4636197287141553926
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768092314216387478}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0000000034863072, y: -0.029245269}
-  m_Size: {x: 1.0262975, y: 0.55302185}
-  m_Direction: 1
---- !u!114 &3043981656778900684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3043981656778900683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f41636bf835ac443b0065666bb3dc39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stage_twigs_needed: 0100000001000000
-  stage_bugs_needed: 0000000001000000
-  twig_thought: {fileID: 11400000, guid: a9b1f88b72e8aca41a4d52c4138ba4ad, type: 2}
-  bug_thought: {fileID: 11400000, guid: 9e425edb6a308394d98c91e986074177, type: 2}
-  sleeping_var: {fileID: 11400000, guid: fe06edcd6188869488bc4e31c7b59bd9, type: 2}
-  nest_sprites:
-  - {fileID: 21300000, guid: 5c280546d777246f6ae0bb63f0b4c640, type: 3}
-  - {fileID: 21300000, guid: 5aa0e3e4f2243844eaf4bfce7daf7337, type: 3}
-  - {fileID: 21300000, guid: c434690a348a6f84bb22e99a5729ac6e, type: 3}
+  m_Offset: {x: -0.003583908, y: 0.031829834}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.048, y: 1.024}
+    newSize: {x: 9.6, y: 4.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.361867, y: 0.5156746}
+  m_EdgeRadius: 0
