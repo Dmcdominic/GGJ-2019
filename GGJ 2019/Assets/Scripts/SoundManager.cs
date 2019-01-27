@@ -12,11 +12,13 @@ public class SoundManager : MonoBehaviour {
 	public AudioSource hop;
 	public AudioSource gliding;
 	public AudioSource updraft;
+	public AudioSource sleeping;
 	public AudioSource titleTrack;
 	public AudioSource lvlTrack;
 
 	public bool_var gliding_var;
 	public bool_var updraft_var;
+	public bool_var sleeping_var;
 	public static SoundManager instance = null;
 	public float lowPitchRange;
 	public float highPitchRange;
@@ -51,6 +53,7 @@ public class SoundManager : MonoBehaviour {
 
 	// Turn the gliding and updraft sounds on/off appropriately
 	private void Update() {
+		// Gliding
 		if (!gliding.isPlaying) {
 			gliding.Play();
 			gliding.volume = 0f;
@@ -62,6 +65,7 @@ public class SoundManager : MonoBehaviour {
 			gliding.volume -= Time.deltaTime * 3;
 		}
 
+		// Updraft
 		if (!updraft.isPlaying) {
 			updraft.Play();
 			updraft.volume = 0f;
@@ -71,6 +75,18 @@ public class SoundManager : MonoBehaviour {
 			updraft.volume += Time.deltaTime * 4;
 		} else if (!updraft_var.val && gliding.volume > 0f) {
 			updraft.volume -= Time.deltaTime * 3;
+		}
+
+		// Sleeping
+		if (!sleeping.isPlaying) {
+			sleeping.Play();
+			sleeping.volume = 0f;
+		}
+
+		if (sleeping_var.val && sleeping.volume < 1f) {
+			sleeping.volume += Time.deltaTime * 4;
+		} else if (!sleeping_var.val && sleeping.volume > 0f) {
+			sleeping.volume -= Time.deltaTime * 6;
 		}
 	}
 
@@ -104,6 +120,10 @@ public class SoundManager : MonoBehaviour {
 	public void playHopSound() {
 		hop.pitch = Random.Range(lowPitchRange * 2, highPitchRange * 2);
 		hop.Play();
+	}
+
+	public void playSleeping() {
+		sleeping.Play();
 	}
 
 	public void playSingle(AudioClip clip) {

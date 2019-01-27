@@ -53,6 +53,7 @@ public class black_fade : MonoBehaviour {
 		currently_fading_to_black = false;
 		currently_fading_from_black = true;
 		rate = 1f / duration;
+		movement.bird_instance.set_movement_enabled(true);
 	}
 
 	public static void black_fade_to_scene(int build_index) {

@@ -61,11 +61,11 @@ TagManager:
   - name: boundary
     uniqueID: 599818901
     locked: 0
-  - name: nest
-    uniqueID: 2526852391
-    locked: 0
   - name: bird
     uniqueID: 1915640253
+    locked: 0
+  - name: nest
+    uniqueID: 2526852391
     locked: 0
   - name: foreground_obj
     uniqueID: 3802192965

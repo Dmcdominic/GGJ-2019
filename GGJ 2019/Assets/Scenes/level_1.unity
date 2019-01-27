@@ -495,6 +495,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5989220273206739224, guid: ff8acc266a2f49949988d685cab9d24c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5989220273206739221, guid: ff8acc266a2f49949988d685cab9d24c,
         type: 3}
       propertyPath: flutter_force
@@ -520,11 +525,6 @@ PrefabInstance:
       propertyPath: twigsound
       value: 
       objectReference: {fileID: 8300000, guid: d48abe75546b043289f72a2b8bc9566f, type: 3}
-    - target: {fileID: 5989220273206739224, guid: ff8acc266a2f49949988d685cab9d24c,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff8acc266a2f49949988d685cab9d24c, type: 3}
 --- !u!1001 &379931924
@@ -3884,11 +3884,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: nest
       objectReference: {fileID: 0}
-    - target: {fileID: 3043981656778900683, guid: 36f17ca3653aceb47b25a6a02550c6b2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7332912997812125217, guid: 36f17ca3653aceb47b25a6a02550c6b2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3943,47 +3938,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7332912997812125217, guid: 36f17ca3653aceb47b25a6a02550c6b2,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.08847764
-      objectReference: {fileID: 0}
-    - target: {fileID: 7332912997812125217, guid: 36f17ca3653aceb47b25a6a02550c6b2,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.08847764
-      objectReference: {fileID: 0}
-    - target: {fileID: 7332912997812125217, guid: 36f17ca3653aceb47b25a6a02550c6b2,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.08847764
-      objectReference: {fileID: 0}
-    - target: {fileID: 8836423767809110490, guid: 36f17ca3653aceb47b25a6a02550c6b2,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 5c280546d777246f6ae0bb63f0b4c640,
-        type: 3}
-    - target: {fileID: 2360238430624686064, guid: 36f17ca3653aceb47b25a6a02550c6b2,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: 0.23663783
-      objectReference: {fileID: 0}
-    - target: {fileID: 2360238430624686064, guid: 36f17ca3653aceb47b25a6a02550c6b2,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.029245289
-      objectReference: {fileID: 0}
-    - target: {fileID: 2360238430624686064, guid: 36f17ca3653aceb47b25a6a02550c6b2,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.55302197
-      objectReference: {fileID: 0}
-    - target: {fileID: 2360238430624686064, guid: 36f17ca3653aceb47b25a6a02550c6b2,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.55302197
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36f17ca3653aceb47b25a6a02550c6b2, type: 3}

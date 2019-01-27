@@ -34,6 +34,7 @@ public class movement : MonoBehaviour {
 	// Static settings
 	public static move_stage move_Stage = move_stage.glide; // Start this at flutter, if we have time
 	public static bool gliding = false;
+	public static bool movement_enabled = true;
 	public static int current_scene = 1;
 	public static movement bird_instance;
 
@@ -81,6 +82,11 @@ public class movement : MonoBehaviour {
 	void FixedUpdate() {
 		// Reset the current_scene
 		current_scene = SceneManager.GetActiveScene().buildIndex;
+
+		if (!movement_enabled) {
+			camera_track();
+			return;
+		}
 
 		// Get input
 		float x_input = Input.GetAxis(horizontal_axis);
@@ -172,9 +178,18 @@ public class movement : MonoBehaviour {
 		}
 
 		// Camera tracking
+		camera_track();
+	}
+
+	private void camera_track() {
 		Transform cam = Camera.main.transform;
 		Vector2 displacement = transform.position - cam.position;
 		Camera.main.transform.Translate(displacement * Time.deltaTime * cam_adjust_time);
+	}
+
+	public void set_movement_enabled(bool enabled) {
+		movement_enabled = enabled;
+		rb.gravityScale = enabled ? base_grav_scale : 0;
 	}
 
 	private void OnTriggerEnter2D(Collider2D collider) {
