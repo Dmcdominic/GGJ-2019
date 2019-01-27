@@ -13,6 +13,7 @@ public class SoundManager : MonoBehaviour {
 	public AudioSource smallChirp;
 	public AudioSource hop;
 	public AudioSource veryHappy;
+	public AudioSource cutDown;
 
 	public AudioSource gliding;
 	public AudioSource updraft;
@@ -59,10 +60,14 @@ public class SoundManager : MonoBehaviour {
 			titleTrack.Stop();
 			lvlTrack.Play();
 			lvl2Track.Stop();
-		} else if (next.buildIndex >= 4 && !lvl2Track.isPlaying) {
+		} else if (next.buildIndex == 4 && !lvl2Track.isPlaying) {
 			titleTrack.Stop();
 			lvlTrack.Stop();
 			lvl2Track.Play();
+		} else if (next.buildIndex == 5 ) {
+			titleTrack.Stop();
+			lvlTrack.Stop();
+			lvl2Track.Stop();
 		}
 	}
 
@@ -140,6 +145,10 @@ public class SoundManager : MonoBehaviour {
 	public void playHopSound() {
 		hop.pitch = Random.Range(lowPitchRange * 2, highPitchRange * 2);
 		hop.Play();
+	}
+
+	public void playCutDown() {
+		cutDown.Play();
 	}
 
 	public void playVeryHappy(bool delayed = false) {

@@ -65,6 +65,11 @@ public class black_fade : MonoBehaviour {
 		yield return new WaitForSeconds(duration);
 		SceneManager.LoadScene(build_index);
 		yield return new WaitUntil(() => SceneManager.GetActiveScene().buildIndex == build_index);
-		fade_from_black(duration);
+		if (build_index == 5) {
+			yield return new WaitForSeconds(8f);
+			fade_from_black(3f);
+		} else {
+			fade_from_black(duration);
+		}
 	}
 }

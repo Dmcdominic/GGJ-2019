@@ -102,7 +102,11 @@ public class nest : MonoBehaviour {
 		movement.bird_instance.GetComponent<Animator>().SetTrigger("sleep");
 		yield return new WaitForSeconds(3f);
 		if (movement.move_Stage == move_stage.momma) {
-			black_fade.black_fade_to_scene(1);
+			if (Random.value < 0.33f) {
+				black_fade.black_fade_to_scene(5);
+			} else {
+				black_fade.black_fade_to_scene(1);
+			}
 		} else {
 			black_fade.fade_to_black(3f);
 			yield return new WaitForSeconds(3f);
