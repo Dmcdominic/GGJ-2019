@@ -93,13 +93,17 @@ public class nest : MonoBehaviour {
 		}
 		movement.bird_instance.GetComponent<Animator>().SetTrigger("sleep");
 		yield return new WaitForSeconds(3f);
-		black_fade.fade_to_black(3f);
-		yield return new WaitForSeconds(3f);
-		yield return new WaitForSeconds(2f);
-		sleeping_var.val = false;
-		movement.bird_instance.set_movement_enabled(true);
-		movement.bird_instance.GetComponent<Animator>().SetTrigger("wake up");
-		black_fade.fade_from_black(1.5f);
+		if (movement.move_Stage == move_stage.momma) {
+			black_fade.black_fade_to_scene(1);
+		} else {
+			black_fade.fade_to_black(3f);
+			yield return new WaitForSeconds(3f);
+			yield return new WaitForSeconds(2f);
+			sleeping_var.val = false;
+			movement.bird_instance.set_movement_enabled(true);
+			movement.bird_instance.GetComponent<Animator>().SetTrigger("wake up");
+			black_fade.fade_from_black(1.5f);
+		}
 	}
 
 	private void update_nest_sprite() {

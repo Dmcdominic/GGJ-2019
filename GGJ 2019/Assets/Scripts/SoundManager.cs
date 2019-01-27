@@ -20,6 +20,7 @@ public class SoundManager : MonoBehaviour {
 
 	public AudioSource titleTrack;
 	public AudioSource lvlTrack;
+	public AudioSource lvl2Track;
 
 	// Other references and vars
 	public bool_var gliding_var;
@@ -53,9 +54,15 @@ public class SoundManager : MonoBehaviour {
 		if (next.buildIndex < 2 && !titleTrack.isPlaying) {
 			titleTrack.Play();
 			lvlTrack.Stop();
-		} else if (next.buildIndex >= 2 && !lvlTrack.isPlaying) {
+			lvl2Track.Stop();
+		} else if (next.buildIndex == 2 && !lvlTrack.isPlaying) {
 			titleTrack.Stop();
 			lvlTrack.Play();
+			lvl2Track.Stop();
+		} else if (next.buildIndex >= 4 && !lvl2Track.isPlaying) {
+			titleTrack.Stop();
+			lvlTrack.Stop();
+			lvl2Track.Play();
 		}
 	}
 
