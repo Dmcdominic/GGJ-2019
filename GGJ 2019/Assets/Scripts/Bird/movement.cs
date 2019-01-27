@@ -20,15 +20,12 @@ public class movement : MonoBehaviour {
 	public float jump_velo;
 	public float raycast_dist;
 
-	public float updraft_accel;
-
 	public float cam_adjust_time;
 
 	public GameObject visuals;
 	public GameObject feet_pos;
 
 	public bool_var gliding_var;
-	public bool_var updrafting_var;
 
 	// Static settings
 	public static move_stage move_Stage = move_stage.glide; // Start this at flutter, if we have time
@@ -46,19 +43,15 @@ public class movement : MonoBehaviour {
 
 	private int landing_layer_mask;
 
-	private bool updrafting = false;
-
 	// Component references
 	private Rigidbody2D rb;
 	private Collider2D col;
-	private Animator animator;
 
 
 	// Init
 	void Awake() {
 		rb = GetComponent<Rigidbody2D>();
 		col = GetComponent<Collider2D>();
-		animator = GetComponent<Animator>();
 
 		base_grav_scale = rb.gravityScale;
 		landing_layer_mask = LayerMask.GetMask(new string[] { "platform" });
@@ -70,8 +63,7 @@ public class movement : MonoBehaviour {
 	// Called once per frame
 	void FixedUpdate() {
 		float x_input = Input.GetAxis(horizontal_axis);
-		float x_input_raw = Input.GetAxisRaw(horizontal_axis);
-		float y_input_raw = Input.GetAxisRaw(vertical_axis);
+		float y_input = Input.GetAxisRaw(vertical_axis);
 
 		// Horizontal movement
 		transform.Translate(Mathf.Abs(x_input) * (-1f) * x_mult * Time.deltaTime, 0, 0);
@@ -92,7 +84,7 @@ public class movement : MonoBehaviour {
 			case move_stage.flutter:
 				if (flutter_timer > 0) {
 					flutter_timer -= Time.deltaTime;
-				} else if (y_input_raw > 0 && rb.velocity.y < flutter_thresh) {
+				} else if (y_input > 0 && rb.velocity.y < flutter_thresh) {
 					rb.AddForce(new Vector2(0, flutter_force));
 					flutter_timer = flutter_delay;
 				}
@@ -102,18 +94,18 @@ public class movement : MonoBehaviour {
 			case move_stage.jump:
 			// Fall through to double_jump, which has same behavior
 			case move_stage.double_jump:
-				if (y_input_raw > 0 && !jump_held && jump_charges > 0) {
+				if (y_input > 0 && !jump_held && jump_charges > 0) {
 					jump();
 				}
 				break;
 			case move_stage.fly:
-				if (y_input_raw > 0 && !jump_held) {
+				if (y_input > 0 && !jump_held) {
 					jump();
 				}
 				break;
 		}
 
-		if (y_input_raw <= 0) {
+		if (y_input <= 0) {
 			jump_held = false;
 		} else {
 			jump_held = true;
@@ -122,31 +114,14 @@ public class movement : MonoBehaviour {
 		// Fall through platforms if you are holding down
 		//col.enabled = y_input >= 0;
 
-		// Updraft check
-		if (col.IsTouchingLayers(LayerMask.GetMask(new string[] { "updraft" }))) {
-			rb.velocity += new Vector2(0, updraft_accel * Time.deltaTime);
-			updrafting = true;
-			updrafting_var.val = true;
-		} else {
-			updrafting = false;
-			updrafting_var.val = false;
-		}
-
 		// Glide if you're falling, and holding up
-		check_glide(y_input_raw);
+		check_glide(y_input);
 		gliding_var.val = gliding;
-		animator.SetBool("glide", gliding);
+		// todo - glide animation
 
 		// Clamp the velocity
 		float falling_clamp = gliding ? glide_max_velo : max_velo;
 		rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -falling_clamp, jump_velo + 0.1f));
-
-		// Check if you should be hopping
-		if (Mathf.Abs(x_input_raw) > 0 && Mathf.Abs(rb.velocity.y) < 0.05f) {
-			animator.SetBool("hopping", true);
-		} else {
-			animator.SetBool("hopping", false);
-		}
 
 		// Transform flip
 		if (x_input > 0) {
@@ -166,12 +141,6 @@ public class movement : MonoBehaviour {
 		if (move_Stage == move_stage.flutter) {
 			gliding = false;
 			gliding_var.val = false;
-			return;
-		}
-
-		if (updrafting) {
-			rb.gravityScale = glide_grav_scale;
-			gliding = true;
 			return;
 		}
 

@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour {
 	public AudioSource flap;
@@ -10,45 +9,31 @@ public class SoundManager : MonoBehaviour {
 	public AudioSource pickupTwig;
 	public AudioSource smallChirp;
 	public AudioSource gliding;
-	public AudioSource updraft;
-	public AudioSource titleTrack;
-	public AudioSource lvlTrack;
-
 	public bool_var gliding_var;
-	public bool_var updraft_var;
 	public static SoundManager instance = null;
 	public float lowPitchRange;
 	public float highPitchRange;
 	public float smallChirpRangeMult;
 
 
-	// Static instance setup and initialization
+	// Start is called before the first frame update
 	void Awake() {
-		if (instance == null) {
+		//Check if there is already an instance of SoundManager
+		if (instance == null)
+			//if not, set it to this.
 			instance = this;
-		} else if (instance != this) {
+		//If instance already exists:
+		else if (instance != this)
+			//Destroy this, this enforces our singleton pattern so there can only be one instance of SoundManager.
 			Destroy(gameObject);
-			return;
-		}
-		
+
+		//Set SoundManager to DontDestroyOnLoad so that it won't be destroyed when reloading our scene.
 		DontDestroyOnLoad(gameObject);
 
 		StartCoroutine("repeat_chrip");
-
-		SceneManager.activeSceneChanged += onSceneChanged;
 	}
 
-	private void onSceneChanged(Scene current, Scene next) {
-		if (next.buildIndex < 2 && !titleTrack.isPlaying) {
-			titleTrack.Play();
-			lvlTrack.Stop();
-		} else if (next.buildIndex >= 2 && !lvlTrack.isPlaying) {
-			titleTrack.Stop();
-			lvlTrack.Play();
-		}
-	}
-
-	// Turn the gliding and updraft sounds on/off appropriately
+	// Turn the gliding sound on/off appropriately
 	private void Update() {
 		if (!gliding.isPlaying) {
 			gliding.Play();
@@ -59,17 +44,6 @@ public class SoundManager : MonoBehaviour {
 			gliding.volume += Time.deltaTime * 4;
 		} else if (!gliding_var.val && gliding.volume > 0.1f) {
 			gliding.volume -= Time.deltaTime * 3;
-		}
-
-		if (!updraft.isPlaying) {
-			updraft.Play();
-			updraft.volume = 0f;
-		}
-
-		if (updraft_var.val && gliding.volume < 1f) {
-			updraft.volume += Time.deltaTime * 4;
-		} else if (!updraft_var.val && gliding.volume > 0f) {
-			updraft.volume -= Time.deltaTime * 3;
 		}
 	}
 

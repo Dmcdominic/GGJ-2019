@@ -36,9 +36,7 @@ public class twig_carrier : MonoBehaviour {
 	// Pick up a twig off the ground
 	private void pickup_twig(GameObject the_twig) {
 		to_destroy = the_twig;
-		StartCoroutine(ensure_destroyed(the_twig));
 		carrying_twig = true;
-		StartCoroutine(ensure_twig_revealed());
 		SoundManager.instance.playPickupTwig();
 		animator.SetTrigger("peck");
 	}
@@ -68,27 +66,9 @@ public class twig_carrier : MonoBehaviour {
 	// Eat the big bug to unlock jumping
 	private void eat_big_bug(GameObject big_bug) {
 		to_destroy = big_bug;
-		StartCoroutine(ensure_destroyed(big_bug));
 		twig_in_beak.SetActive(false);
-		StartCoroutine(ensure_twig_revealed());
 		SoundManager.instance.playEat();
 		animator.SetTrigger("peck");
 		movement.move_Stage = move_stage.jump;
-	}
-
-	// Start this coroutine to make sure an object gets destroyed
-	IEnumerator ensure_destroyed(GameObject obj) {
-		yield return new WaitForSeconds(0.4f);
-		if (obj != null) {
-			Destroy(obj);
-		}
-	}
-
-	// Start this coroutine to make sure the twig in your beak shows up
-	IEnumerator ensure_twig_revealed() {
-		yield return new WaitForSeconds(0.6f);
-		if (carrying_twig) {
-			twig_in_beak.SetActive(true);
-		}
 	}
 }
