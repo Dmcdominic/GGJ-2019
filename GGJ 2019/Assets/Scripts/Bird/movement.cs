@@ -89,6 +89,8 @@ public class movement : MonoBehaviour {
 		gliding = false;
 		movement_enabled = true;
 		current_scene = 1;
+
+		nest.nest_full_init();
 	}
 
 	// Called once per frame
