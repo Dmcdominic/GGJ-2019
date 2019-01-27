@@ -72,6 +72,7 @@ public class twig_carrier : MonoBehaviour {
 		twig_in_beak.SetActive(false);
 		StartCoroutine(ensure_twig_revealed());
 		SoundManager.instance.playEat();
+		SoundManager.instance.playVeryHappy(true);
 		animator.SetTrigger("peck");
 		movement.move_Stage = move_stage.jump;
 	}
