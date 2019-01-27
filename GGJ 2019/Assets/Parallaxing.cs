@@ -5,7 +5,7 @@ using UnityEngine;
 public class Parallaxing : MonoBehaviour
 {
     public Transform[] backgrounds;
-    private float[] parallalScales;
+    private float[] parallaxScales;
     public float smoothing = 1f;
 
     private Transform cam;
@@ -21,27 +21,23 @@ public class Parallaxing : MonoBehaviour
     void Start()
     {
         previousCamPos = cam.position;
-        parallalScales = new float[backgrounds.Length];
-
-        for (int i = 0; i < backgrounds.Length; i++) {
-            parallalScales[i] = backgrounds[i].position.z * -1;
+        parallaxScales = new float[backgrounds.Length];
+        for (int i = 0; i < backgrounds.Length; i++)
+        {
+            parallaxScales[i] = backgrounds[i].position.z * -1;
         }
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i > backgrounds.Length; i++)
+        for (int i = 0; i < backgrounds.Length; i++)
         {
-            float parallax = (previousCamPos.x - cam.position.x) * 
-                              parallalScales[i];
+            float parallax = (previousCamPos.x - cam.position.x) * parallaxScales[i];
             float backgroundTargetPosX = backgrounds[i].position.x + parallax;
-            Vector3 backgroundTargetPos = new Vector3 (backgroundTargetPosX, 
-                backgrounds[i].position.y, backgrounds[i].position.z);
-            backgrounds[i].position = Vector3.Lerp(backgrounds[i].position,
-                backgroundTargetPos, smoothing * Time.deltaTime);
-
+            Vector3 backgroundTargetPos = new Vector3(backgroundTargetPosX, backgrounds[i].position.z);
+            backgrounds[i].position = Vector3.Lerp(backgrounds[i].position, backgroundTargetPos, smoothing * Time.deltaTime);
         }
         previousCamPos = cam.position;
     }

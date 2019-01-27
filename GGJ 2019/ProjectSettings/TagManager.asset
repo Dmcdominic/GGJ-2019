@@ -27,7 +27,7 @@ TagManager:
   - nest
   - background
   - updraft
-  - 
+  - boundary
   - 
   - 
   - 
@@ -51,14 +51,14 @@ TagManager:
   - name: obstacles
     uniqueID: 2532216629
     locked: 0
-  - name: player
-    uniqueID: 1541835999
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: platforms
     uniqueID: 2784141419
+    locked: 0
+  - name: boundary
+    uniqueID: 599818901
     locked: 0
   - name: nest
     uniqueID: 2526852391
@@ -71,4 +71,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 2609367167
+    locked: 0
+  - name: player
+    uniqueID: 1541835999
     locked: 0
