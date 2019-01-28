@@ -21,6 +21,7 @@ public class title_control : MonoBehaviour {
 
 	private void start_anim() {
 		animating = true;
+		SoundManager.instance.playHatching();
 		GetComponent<Animator>().SetTrigger("egg cracks");
 		StartCoroutine(load_scene());
 	}

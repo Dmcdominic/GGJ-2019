@@ -13,6 +13,7 @@ public class SoundManager : MonoBehaviour {
 	public AudioSource smallChirp;
 	public AudioSource hop;
 	public AudioSource veryHappy;
+	public AudioSource hatching;
 	public AudioSource cutDown;
 
 	public AudioSource gliding;
@@ -145,6 +146,10 @@ public class SoundManager : MonoBehaviour {
 	public void playHopSound() {
 		hop.pitch = Random.Range(lowPitchRange * 2, highPitchRange * 2);
 		hop.Play();
+	}
+
+	public void playHatching() {
+		hatching.Play();
 	}
 
 	public void playCutDown() {
