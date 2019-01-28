@@ -47,6 +47,7 @@ public class black_fade : MonoBehaviour {
 		currently_fading_to_black = true;
 		currently_fading_from_black = false;
 		rate = 1f / duration;
+		movement.bird_instance.set_movement_enabled(false);
 	}
 
 	public static void fade_from_black(float duration) {
