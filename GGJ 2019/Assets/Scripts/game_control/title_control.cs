@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class title_control : MonoBehaviour {
 
-
 	public int scene_index;
 
-	void Start() {
-		
+	private bool animating = false;
+
+
+	private void Start() {
+		movement.full_init();
 	}
 
 	private void Update() {
-		if (Input.anyKeyDown && !(Input.GetAxisRaw("Cancel") > 0)) {
+		if (!animating && Input.anyKeyDown && !(Input.GetAxisRaw("Cancel") > 0)) {
 			start_anim();
 		}
 	}
 
 	private void start_anim() {
+		animating = true;
 		GetComponent<Animator>().SetTrigger("egg cracks");
 		StartCoroutine(load_scene());
 	}

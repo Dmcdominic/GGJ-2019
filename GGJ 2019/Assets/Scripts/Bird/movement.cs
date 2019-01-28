@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 public class movement : MonoBehaviour {
 
 	// Public fields
-	public move_stage init_stage;
-
 	public float x_mult;
 	public float max_velo;
 
@@ -219,7 +217,9 @@ public class movement : MonoBehaviour {
 	private void camera_track() {
 		Transform cam = Camera.main.transform;
 		Vector2 displacement = transform.position - cam.position;
-		Camera.main.transform.Translate(displacement * Time.deltaTime * cam_adjust_time);
+		if (displacement.magnitude > 0.1f) {
+			Camera.main.transform.Translate(displacement * Time.deltaTime * cam_adjust_time);
+		}
 	}
 
 	public void set_movement_enabled(bool enabled) {

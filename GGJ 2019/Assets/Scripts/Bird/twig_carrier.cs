@@ -71,6 +71,9 @@ public class twig_carrier : MonoBehaviour {
 
 	// Eat small bug
 	private void eat_smol_bug(GameObject smol_bug) {
+		if (to_destroy == smol_bug) {
+			return;
+		}
 		to_destroy = smol_bug;
 		StartCoroutine(ensure_destroyed(smol_bug));
 		StartCoroutine(ensure_twig_revealed());
@@ -80,6 +83,9 @@ public class twig_carrier : MonoBehaviour {
 
 	// Eat the big bug to unlock jumping
 	private void eat_big_bug(GameObject big_bug) {
+		if (to_destroy == big_bug) {
+			return;
+		}
 		to_destroy = big_bug;
 		StartCoroutine(ensure_destroyed(big_bug));
 		twig_in_beak.SetActive(false);
