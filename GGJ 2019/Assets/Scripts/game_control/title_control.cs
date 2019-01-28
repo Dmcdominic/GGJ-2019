@@ -8,13 +8,17 @@ public class title_control : MonoBehaviour {
 
 	private bool animating = false;
 
+	private float timer = 0f;
+
 
 	private void Start() {
 		movement.full_init();
 	}
 
 	private void Update() {
-		if (!animating && Input.anyKeyDown && !(Input.GetAxisRaw("Cancel") > 0)) {
+		if (timer < 4.5f) {
+			timer += Time.deltaTime;
+		} else if (!animating && Input.anyKeyDown && !(Input.GetAxisRaw("Cancel") > 0)) {
 			start_anim();
 		}
 	}

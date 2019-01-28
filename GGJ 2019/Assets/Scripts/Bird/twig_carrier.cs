@@ -93,7 +93,11 @@ public class twig_carrier : MonoBehaviour {
 		SoundManager.instance.playEat();
 		SoundManager.instance.playVeryHappy(true);
 		animator.SetTrigger("peck");
-		movement.move_Stage = move_stage.jump;
+		if (movement.move_Stage < move_stage.jump) {
+			movement.move_Stage = move_stage.jump;
+		} else {
+			nest.eat_bug();
+		}
 	}
 
 	// Start this coroutine to make sure an object gets destroyed
