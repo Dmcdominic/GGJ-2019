@@ -74,12 +74,6 @@ public class movement : MonoBehaviour {
 
 		base_grav_scale = rb.gravityScale;
 		landing_layer_mask = LayerMask.GetMask(new string[] { "platform" });
-		// todo - this is editor only:
-#if UNITY_EDITOR
-		move_Stage = init_stage;
-#endif
-#if UNITY_STANDALONE
-#endif
 		gliding = false;
 		gliding_var.val = false;
 	}

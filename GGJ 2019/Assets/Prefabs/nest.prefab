@@ -68,7 +68,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1768114905
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5c280546d777246f6ae0bb63f0b4c640, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stage_twigs_needed: 010000000200000002000000
-  stage_bugs_needed: 000000000200000002000000
+  stage_bugs_needed: 000000000000000000000000
   twig_thought: {fileID: 11400000, guid: a9b1f88b72e8aca41a4d52c4138ba4ad, type: 2}
   bug_thought: {fileID: 11400000, guid: 9e425edb6a308394d98c91e986074177, type: 2}
   sleeping_var: {fileID: 11400000, guid: fe06edcd6188869488bc4e31c7b59bd9, type: 2}

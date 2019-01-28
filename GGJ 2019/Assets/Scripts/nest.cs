@@ -34,6 +34,7 @@ public class nest : MonoBehaviour {
 		bird_layer_mask = LayerMask.GetMask(new string[] { "bird" });
 
 		if (!inited) {
+			print("initing");
 			twigs_needed = stage_twigs_needed[0];
 			bugs_needed = stage_bugs_needed[0];
 			sleeping_var.val = false;
@@ -119,6 +120,7 @@ public class nest : MonoBehaviour {
 	}
 
 	private void update_nest_sprite() {
+		print("Movement stage: " + movement.move_Stage);
 		if (movement.move_Stage == move_stage.flutter || movement.move_Stage == move_stage.glide || movement.move_Stage == move_stage.jump) {
 			sr.sprite = nest_sprites[0];
 		} else if (movement.move_Stage == move_stage.double_jump) {
